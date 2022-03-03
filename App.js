@@ -1,15 +1,14 @@
-import { View, Text } from "react-native";
+import 'react-native-gesture-handler';
+import app from './firebase'
+import AuthNavigation from './AuthNavigation';
+import { StateProvider } from './StateProvider';
+import reducer, { initialState } from './reducer';
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <AuthNavigation />
+    </StateProvider>
+      
   );
 }
