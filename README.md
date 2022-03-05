@@ -1,1 +1,1 @@
-I stopped at updating the user to database once after authentication in signUp
+
